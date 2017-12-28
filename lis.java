@@ -8,7 +8,7 @@ class lis_nc
 {
 	public static void main(String ar[])
 	{
-		int arr[] = {4,-1,3,6,5,7};
+		int arr[] = {4,-1,3,6,5,7,1};
 		Solution obj = new Solution();
 		obj.lis(arr);
 	}
@@ -33,7 +33,11 @@ class Solution
 			{
 				if(arr[i] > arr[j])
 				{
-					T[i] = max(T[i] , T[j]+1);
+					T[i] = max(T[i] , T[j]+1); // find the maximum among preceeding elements. each time a new maximum is found it is put into T[i]
+				}
+				else
+				{
+					T[i] = T[i-1];
 				}
 			}	
 		}

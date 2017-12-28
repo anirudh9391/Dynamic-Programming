@@ -1,8 +1,14 @@
+/*
+ Longest increasing subsequence contiguous
+author - Anirudh Krishnan
+date - 28/12/2017
+*/
+
 class lis_c
 {
         public static void main(String ar[])
         {
-                int arr[] = {4,-1,3,6,5,7,1};
+                int arr[] = {3,5,4,5,7,8,1};
                 Solution obj = new Solution();
                 obj.lis(arr);
         }
@@ -23,13 +29,16 @@ class Solution
 
                 for(int i=1;i<n;i++)
                 {
-                        for(int j=0;j<i;j++)
+                        
+               		if(arr[i] > arr[i-1])
                         {
-                                if(arr[i] > arr[j])
-                                {
-                                        T[i] = max(T[i] , T[j]+1);
-                                }
+                        	T[i] = T[i-1]+1;
                         }
+			else
+			{
+				T[i] = 1;
+			}
+			
                 }
 
                 for(int i=0;i<n;i++)

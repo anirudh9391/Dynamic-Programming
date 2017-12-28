@@ -1,4 +1,10 @@
-class lis
+/* 
+ LIS - Longest increasing Subsequence (Non-contiguous)
+ author - Anirudh Krishnan
+ date - 28/12/2017 
+*/
+
+class lis_nc
 {
 	public static void main(String ar[])
 	{

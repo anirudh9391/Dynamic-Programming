@@ -8,7 +8,7 @@ class lis_nc
 {
 	public static void main(String ar[])
 	{
-		int arr[] = {4,-1,3,6,5,7,1};
+		int arr[] = {10,22,9,33,21,50,41,60,80};
 		Solution obj = new Solution();
 		obj.lis(arr);
 	}
